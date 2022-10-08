@@ -1,0 +1,1 @@
+SELECT json_data -> 'glossary' ->> 'title' AS title FROM dbt.testing

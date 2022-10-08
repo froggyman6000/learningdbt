@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: testingout
+    description: "Just a little test"
+    columns:
+      - name: title
+        description: "The title"
+        tests:
+          - not_null

@@ -1,18 +1,18 @@
-### Working test scenario of using a select statement with a JSON object to create a new table on PostgreSQL
+# Working test scenario of using a select statement with a JSON object to create a new table on PostgreSQL
 
 You need to be inside the 'learning' directory to execute dbt commands correctly.
 
 Useful commands:
-
+```
 dbt test - tests if the models pass
 dbt debug - tests if there are no errors and if connection to the database is good
 dbt run - runs dbt
+```
 
-
-# profiles.yml code
+## profiles.yml code
 
 Below is the code from profiles.yml located in C:\Users\{username}\.dbt change whatever is necessary to get it to work.
-
+```
 learning:
   outputs:
 
@@ -37,3 +37,4 @@ learning:
       schema: dbt
 
   target: dev
+```

@@ -1,15 +1,39 @@
-Welcome to your new dbt project!
+### Working test scenario of using a select statement with a JSON object to create a new table on PostgreSQL
 
-### Using the starter project
+You need to be inside the 'learning' directory to execute dbt commands correctly.
 
-Try running the following commands:
-- dbt run
-- dbt test
+Useful commands:
+
+dbt test - tests if the models pass
+dbt debug - tests if there are no errors and if connection to the database is good
+dbt run - runs dbt
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+# profiles.yml code
+
+Below is the code from profiles.yml located in C:\Users\{username}\.dbt change whatever is necessary to get it to work.
+
+learning:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 1
+      host: 127.0.0.1
+      port: 5432
+      user: root
+      pass: root
+      dbname: test_db
+      schema: dbt
+
+    prod:
+      type: postgres
+      threads: 1
+      host: 127.0.0.1
+      port: 5432
+      user: root
+      pass: root
+      dbname: test_db
+      schema: dbt
+
+  target: dev
